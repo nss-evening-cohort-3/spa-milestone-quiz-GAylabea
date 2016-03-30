@@ -1,0 +1,34 @@
+{
+  "cars": [
+    {
+      "make": "Volkswagon",
+      "model": "Superbeetle",
+      "year": "1971", 
+      "price": "750",
+      "color": "AliceBlue", 
+      // #F0F8FF
+      "purchased": false,
+      "description": "Need a project? This VW is for you - surfing racks included."
+    },
+      {
+      "make": "Ford",
+      "model": "ZX3",
+      "year": "1999", 
+      "price": "2000",
+      "color": "Green",
+      // #008000
+      "purchased": false,
+      "description": "Perfect for a student or first-time drive. A reliable and economical choice."
+    }, 
+      {
+      "make": "Nissan",
+      "model": "Versa Note",
+      "year": "2014", 
+      "price": "13500",
+      "color": "DarkRed",
+      // #8B0000
+      "purchased": false,
+      "description": "Great starter car. Also cute."
+    },
+  ]
+}
