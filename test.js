@@ -6,36 +6,49 @@ var carLot = (function () {
   return {
      loadInventory: function () {
       var loader = new XMLHttpRequest();
-      loader.addEventListener("load", function () {
-      inventory = JSON.parse(this.responseText).inventory; 
-      listInventory (inventory);
-    });
       loader.open("GET", "inventory.json");
       loader.send();
+      loader.addEventListener("load", function () {
+        // this needs the name of the array, cars - not the file
+      inventory = JSON.parse(this.responseText).cars; 
+      // console.log('inventory in loader', inventory); 
+      listInventory (inventory);
+    });
     }
   }
 })(); 
 
 function listInventory (inventory) {
-       // list in the DOM
-      var carDom = document.getElementById("cars");
-     var outputString = "";
-
-      for (var i = 0; i < inventory.length; i++) {
-        var currentInventory = inventory[i];
+       // list in the DOM - get the element where the car cards go
+      var carDom = document.getElementById("container"); 
+      var outputString = "";
+      for (var i = 0; i <inventory.length; i++) {
+      var currentInventory = inventory[i];
         // this is to build the DOM string
-        outputString =+ `<h1>${currentInventory.make}</h1>`;
+      carDom.innerHTML += `<div class = "col-xs-4 card" style="border-color: ${currentInventory.color}"><h1>${currentInventory.make}</h1><h5>${currentInventory.model}</h5><h5>${currentInventory.year}</h5><h5>${currentInventory.price}</h5>${currentInventory.color}</h5><h5>${currentInventory.purchased}</h5><h5>${currentInventory.description}</h5></div>`
       }
-      carDom.innerHTML = outputString;
-}
+      borderClick();
+ }
+// // CarLot.activiateEvents(); 
 
-  // Now that the DOM is loaded, establish all the event listeners needed
-//   CarLot.activateEvents();
+var carCard = document.getElementsByClassName("card"); 
+var navBarInput = document.getElementsByClassName("form-control"); 
+function borderClick () {
+  for (let i = 0; i < carCard.length; i++) {
+    carCard[i].addEventListener('click', function() {
+    carCard[i].classList.toggle("thickborder");
+  for (let i = 0; i<navBarInput.length; i++) {
+    navBarInput[i].value = " ";
+    navBarInput[i].focus();  
+  }
+  })
+  }
+}; 
 
-// }
 
-// Load the inventory and send a callback function to be
-// invoked after the process is complete
-// carLot.loadcarLot(showcarList); 
-carLot.loadInventory(); 
+// function CarLot.activiateEvents(); 
+// // Load the inventory and send a callback function to be
+// // invoked after the process is complete
+// // carLot.loadcarLot(showcarList); 
+carLot.loadInventory(listInventory); 
 

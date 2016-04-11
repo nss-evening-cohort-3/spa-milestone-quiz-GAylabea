@@ -13,6 +13,19 @@ function showCars (inventory) {
     carDom.innerHTML += outputString; 
   }; 
 
+
+this is what works!!!!
+// function listInventory (inventory) {
+//        // list in the DOM - get the element where the car cards go
+//       var carDom = document.getElementById("container"); 
+//       var outputString = "";
+//       for (var i = 0; i <inventory.length; i++) {
+//         var currentInventory = inventory[i];
+//         // this is to build the DOM string
+//       outputString = `<h1>${currentInventory.make}</h1><h5>${currentInventory.model}</h5><h5>${currentInventory.year}</h5><h5>${currentInventory.price}</h5><h5>${currentInventory.color}</h5><h5>${currentInventory.purchased}</h5><h5>${currentInventory.description}</h5>`
+//       carDom.innerHTML += outputString;
+//       }
+// }
   // Now that the DOM is loaded, establish all the event listeners needed
 //   CarLot.activateEvents();
 

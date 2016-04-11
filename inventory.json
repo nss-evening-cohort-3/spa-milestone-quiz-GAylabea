@@ -1,24 +1,29 @@
 {
-  "cars": [
-    {
-      "make": "Volkswagon",
-      "model": "Superbeetle",
-      "year": "1971", 
-      "price": "750",
-      "color": "AliceBlue", 
-      "purchased": false,
-      "description": "Need a project? This VW is for you - surfing racks included."
-    },
-      {
+      "cars": [ {
+        "make": "Volkswagon",
+        "model": "Superbeetle",
+        "year": "1971", 
+        "price": "750",
+        "color": "AliceBlue",         "purchased": false,
+
+        "description": "Need a project? This VW is for you - surfing racks included."
+    },  {
       "make": "Ford",
       "model": "ZX3",
       "year": "1999", 
       "price": "2000",
       "color": "Green",
       "purchased": false,
-      "description": "Perfect for a student or first-time drive. A reliable and economical choice."
-    }, 
-      {
+      "description": "Perfect for a student or first-time driver. A reliable and economical choice."
+    },   {
+      "make": "Ford",
+      "model": "Tempo",
+      "year": "1991", 
+      "price": "500",
+      "color": "Gray",
+      "purchased": false,
+      "description": "Economical junker fit for driving around on the farm. Has custom, zebra-striped seat covers. Lots of personality."
+    }, {
       "make": "Nissan",
       "model": "Versa Note",
       "year": "2014", 
@@ -26,6 +31,5 @@
       "color": "DarkRed",
       "purchased": false,
       "description": "Great starter car. Also cute."
-    }
-  ]
+    }]
 }
